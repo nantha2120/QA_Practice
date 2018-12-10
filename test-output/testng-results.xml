@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="10473" started-at="2018-12-10T16:14:01Z" finished-at="2018-12-10T16:14:12Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="10473" started-at="2018-12-10T16:14:01Z" finished-at="2018-12-10T16:14:12Z">
+      <class name="com.main.login_page.Login">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.main.login_page.Login@5fdba6f9]" name="setup" is-config="true" duration-ms="7675" started-at="2018-12-10T16:14:01Z" finished-at="2018-12-10T16:14:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="invalid_credentials()[pri:1, instance:com.main.login_page.Login@5fdba6f9]" name="invalid_credentials" duration-ms="982" started-at="2018-12-10T16:14:09Z" description="Enter the invalid Username and password" finished-at="2018-12-10T16:14:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalid_credentials -->
+        <test-method status="PASS" signature="Valid_credentials()[pri:2, instance:com.main.login_page.Login@5fdba6f9]" name="Valid_credentials" duration-ms="862" started-at="2018-12-10T16:14:10Z" description="Enter The valid username and password" finished-at="2018-12-10T16:14:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Valid_credentials -->
+        <test-method status="PASS" signature="dashBoard()[pri:3, instance:com.main.login_page.Login@5fdba6f9]" name="dashBoard" duration-ms="112" started-at="2018-12-10T16:14:11Z" description="validate the DashBoard content" finished-at="2018-12-10T16:14:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dashBoard -->
+        <test-method status="PASS" signature="logout()[pri:4, instance:com.main.login_page.Login@5fdba6f9]" name="logout" duration-ms="736" started-at="2018-12-10T16:14:11Z" description="validate logout function" finished-at="2018-12-10T16:14:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method status="PASS" signature="close()[pri:0, instance:com.main.login_page.Login@5fdba6f9]" name="close" is-config="true" duration-ms="80" started-at="2018-12-10T16:14:12Z" finished-at="2018-12-10T16:14:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- com.main.login_page.Login -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
