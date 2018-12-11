@@ -13,6 +13,7 @@ import org.testng.annotations.Test;
 
 import com.main.databroker.DataBroker;
 
+import common_classes.Login_credentials;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Login {
@@ -38,24 +39,20 @@ public class Login {
 //		driver = new ChromeDriver(chromeOptions);
 		driver.get(page_url);
 		driver.manage().window().maximize();
-		
-		
 	}
 	@Test(description="Enter the invalid Username and password", priority=1, enabled = true)
 	public void invalid_credentials() {
 		wait = new WebDriverWait(driver, 100);
-		driver.findElement(By.id("username")).sendKeys(in_UserName);
-		driver.findElement(By.id("password")).sendKeys(Password);
-		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		Login_credentials login = new Login_credentials();
+		driver = login.invlaid_login(driver, in_UserName,Password);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='flash-messages']")));
 		Assert.assertTrue(driver.findElement(By.xpath("//div[@id='flash-messages']")).isDisplayed());
 	}
 	
 	@Test(description = "Enter The valid username and password",priority=2, enabled = true)
 	public void Valid_credentials() {
-		driver.findElement(By.id("username")).sendKeys(UserName);
-		driver.findElement(By.id("password")).sendKeys(Password);
-		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		Login_credentials login2 = new Login_credentials();
+		driver = login2.invlaid_login(driver, UserName,Password);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='flash']")));
 		Assert.assertTrue(driver.findElement(By.xpath("//div[@id='flash']")).isDisplayed());
 	}
