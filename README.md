@@ -1,5 +1,4 @@
 # QA_Practice
-SDET_QA_Assessment
 
 #Setup
 1. Clone or download the Project from Github
